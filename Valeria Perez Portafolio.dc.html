@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="ext-resource-dependency" content="assets/sabverse-hero.jpg">
+<meta name="ext-resource-dependency" content="assets/bib-index.jpg">
+<meta name="ext-resource-dependency" content="assets/alignwell-hero.jpg">
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="200" height="200" fill="#F5F3EE"></rect>
+    <circle cx="152" cy="52" r="18" fill="#CE0E12"></circle>
+    <rect x="118" y="118" width="34" height="34" fill="#F9CE0B"></rect>
+    <text x="60" y="118" font-family="Archivo, Helvetica, sans-serif" font-size="72" font-weight="800" fill="#101010" text-anchor="middle">VP</text>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&amp;display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin:0; background:#F5F3EE; color:#101010; -webkit-font-smoothing:antialiased; }
+  a { color:#101010; text-decoration:none; }
+  a:hover { color:#FF4D2E; }
+  ::selection { background:#F9CE0B; }
+  @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  @keyframes scrollpage { 0%,6% { transform:translateY(0); } 88%,100% { transform:translateY(-62%); } }
+  @keyframes vfloat { 0%,100% { transform:translateY(-14px) rotate(-2deg); } 50% { transform:translateY(14px) rotate(2deg); } }
+  @keyframes vglow { 0%,100% { transform:scale(.9);opacity:.45; } 50% { transform:scale(1.08);opacity:.75; } }
+</style>
+</helmet>
+
+<div style="font-family:Archivo,'Helvetica Neue',Helvetica,sans-serif;background:#F5F3EE;color:#101010;overflow-x:hidden">
+
+  <div aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;opacity:0;pointer-events:none">
+    <img id="ast-mk1" src="assets/mk1.png" alt="">
+    <img id="ast-mk2" src="assets/mk2.png" alt="">
+    <img id="ast-mk3" src="assets/mk3.png" alt="">
+    <img id="ast-sabverse" src="assets/sabverse-hero.jpg" alt="">
+    <img id="ast-alignwell" src="assets/alignwell-hero.jpg" alt="">
+    <img id="ast-bib-index" src="assets/bib-index.jpg" alt="">
+    <img id="ast-bib-repositorio" src="assets/bib-repositorio.jpg" alt="">
+    <img id="ast-bib-catalogo" src="assets/bib-catalogo.jpg" alt="">
+  </div>
+
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 40px;background:rgba(245,243,238,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(16,16,16,.08)">
+    <div style="font-size:19px;font-weight:800;letter-spacing:-.02em">Valeria Pérez<sup style="font-size:10px;font-weight:500">®</sup></div>
+    <nav style="display:flex;gap:34px;font-size:14px;font-weight:500">
+      <a href="#perfil">Perfil</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#web">Web &amp; UX/UI</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" style="display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#101010;color:#F5F3EE;font-size:17px">↗</a>
+  </header>
+
+  <section style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:48px;align-items:start;padding:64px 40px 40px">
+    <div>
+      <h1 style="margin:0;font-size:clamp(56px,7.4vw,124px);line-height:.86;font-weight:800;letter-spacing:-.045em;text-wrap:balance">Diseño<br>que se<br>siente.</h1>
+      <p style="margin: 34px 0 0; max-width: 330px; font-size: 16px; line-height: 1.5; color: #4A4A45; font-weight: 500">Diseñadora gráfica y digital autodidacta. Construyo marcas, interfaces y contenido que hacen que la gente se detenga a mirar.</p>
+      <div style="display:flex;align-items:center;gap:22px;margin-top:32px">
+        <a href="#web" style="display:flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:#F9CE0B;font-size:15px;font-weight:600"><br></a>
+        <a href="#perfil" style="font-size:15px;font-weight:500;border-bottom:1px solid rgba(16,16,16,.3);padding-bottom:2px"><br></a>
+      </div>
+    </div>
+    <div style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) 118px;gap:18px;align-items:start;min-width:0">
+      <div style="position:absolute;left:-30px;bottom:26px;width:104px;height:104px;border-radius:50%;border:14px solid #CE0E12;pointer-events:none;z-index:0"></div>
+      <div style="position:absolute;right:-10px;bottom:-26px;width:86px;height:86px;background:#F9CE0B;transform:rotate(45deg);pointer-events:none"></div>
+      <div style="position:relative;height:420px">
+        <image-slot id="vp-hero" shape="rounded" radius="4" fit="contain" style="--slot-frame-bg:transparent" placeholder="Foto principal — retrato o pieza estrella"></image-slot>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;padding-top:12px">
+        <div style="height:150px"><image-slot id="vp-hero-2" shape="rounded" radius="4" fit="contain" style="--slot-frame-bg:transparent" placeholder="Detalle"></image-slot></div>
+        <p style="margin:0;font-size:12px;line-height:1.45;color:#4A4A45">Socia creativa para marcas que quieren verse distintas.</p>
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em">SCROLL<br>↓</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="overflow:hidden;border-top:1px solid rgba(16,16,16,.12);border-bottom:1px solid rgba(16,16,16,.12);padding:16px 0;background:#101010;color:#F5F3EE">
+    <div style="display:flex;gap:56px;width:max-content;animation:marquee 26s linear infinite;font-size:26px;font-weight:700;letter-spacing:-.02em;white-space:nowrap">
+      <span>Web Design ✦ UX/UI ✦ Branding ✦ Contenido de marca ✦ Web Design ✦ UX/UI ✦ Branding ✦ Contenido de marca ✦</span>
+      <span>Web Design ✦ UX/UI ✦ Branding ✦ Contenido de marca ✦ Web Design ✦ UX/UI ✦ Branding ✦ Contenido de marca ✦</span>
+    </div>
+  </div>
+
+  <section id="perfil" style="padding:96px 40px 40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start">
+    <div style="position:relative;height:620px;min-width:0;overflow:hidden">
+      <image-slot id="vp-perfil" shape="rounded" radius="4" fit="contain" style="--slot-frame-bg:transparent" placeholder="Foto de perfil / de mí trabajando"></image-slot>
+    </div>
+    <div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <span style="width:14px;height:14px;border-radius:50%;background:#CE0E12"></span>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45">01 / PERFIL</div>
+        <span style="width:44px;height:6px;border-radius:999px;background:#F9CE0B"></span>
+      </div>
+      <h2 style="margin:18px 0 0;font-size:clamp(38px,4.6vw,72px);line-height:.94;font-weight:800;letter-spacing:-.04em;max-width:14ch">Hola, soy Valeria.</h2>
+      <p style="margin:26px 0 0;max-width:60ch;font-size:17px;line-height:1.55;color:#3B3B36;text-wrap:pretty">Diseñadora autodidacta enfocada en identidad y experiencia digital. Trabajo con marcas que están empezando y con marcas que necesitan volver a encontrarse. Me interesa el detalle: la tipografía correcta, el color que sostiene una idea, la interfaz que no hay que explicar.</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(16,16,16,.14)">
+        <div><div style="font-size:38px;font-weight:800;letter-spacing:-.03em">6</div><div style="font-size:13px;color:#4A4A45">años diseñando</div></div>
+        <div><div style="font-size:38px;font-weight:800;letter-spacing:-.03em">100%</div><div style="font-size:13px;color:#4A4A45">proyectos a medida</div></div>
+      </div>
+      <div style="margin-top:44px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45;margin-bottom:18px">CERTIFICACIONES</div>
+        <div style="display:flex;flex-direction:column">
+          <div style="display:grid;grid-template-columns:88px 1fr auto;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(16,16,16,.14)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4A45">2023</span>
+            <div><div style="font-size:17px;font-weight:600;letter-spacing:-.01em">Fundamentos de diseño de interfaces UX / UI</div><div style="font-size:13px;color:#4A4A45">Platzi</div></div>
+            <span style="font-size:12px;color:#4A4A45">Certificado</span>
+          </div>
+          <div style="display:grid;grid-template-columns:88px 1fr auto;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(16,16,16,.14)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4A45">2026</span>
+            <div><div style="font-size:17px;font-weight:600;letter-spacing:-.01em">Marketing digital</div><div style="font-size:13px;color:#4A4A45">Platzi</div></div>
+            <span style="font-size:12px;color:#4A4A45">Certificado</span>
+          </div>
+          <div style="display:grid;grid-template-columns:88px 1fr auto;gap:20px;align-items:baseline;padding:16px 0;border-top:1px solid rgba(16,16,16,.14);border-bottom:1px solid rgba(16,16,16,.14)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4A45">2021</span>
+            <div><div style="font-size:17px;font-weight:600;letter-spacing:-.01em">Visualización de datos para Business Intelligence&nbsp;</div><div style="font-size:13px;color:#4A4A45">Platzi</div></div>
+            <span style="font-size:12px;color:#4A4A45">Certificado</span>
+          </div>
+          <div style="display:grid;grid-template-columns:88px 1fr auto;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(16,16,16,.14)">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#4A4A45">2023</span>
+            <div><div style="font-size:17px;font-weight:600;letter-spacing:-.01em">Diseño de Interfaces</div><div style="font-size:13px;color:#4A4A45">Platzi</div></div>
+            <span style="font-size:12px;color:#4A4A45">Certificado</span>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <div style="grid-column:1 / -1;margin-top:56px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45;margin-bottom:18px">HERRAMIENTAS QUE MANEJO</div>
+        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px">
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-figma" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Claude desing</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-illustrator" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Canva</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-photoshop" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Photoshop</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-indesign" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Capcut</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-ae" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Claude Code</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-premiere" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Afifinity</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-webflow" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Miro</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;border:1px solid rgba(16,16,16,.14);border-radius:14px;background:#FFFDF8;min-width:0" style-hover="border-color:#101010">
+            <image-slot id="tool-canva" shape="rounded" radius="8" style="width:34px;height:34px;flex:none" placeholder="logo"></image-slot>
+            <span style="font-size:14px;font-weight:600">Creación con IA</span>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="servicios" style="padding:96px 40px 40px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;border-bottom:1px solid rgba(16,16,16,.14);padding-bottom:22px">
+      <h2 style="margin:0;font-size:clamp(38px,5vw,80px);line-height:.9;font-weight:800;letter-spacing:-.04em">Servicios</h2>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45">02 / QUÉ OFREZCO</div>
+    </div>
+    <div style="position:relative;margin-top:56px;height:430px;overflow:hidden">
+      <sc-for list="{{ svcCards }}" as="c" hint-placeholder-count="4">
+        <div style="position:absolute;left:50%;top:20px;width:300px;height:340px;margin-left:-150px;box-sizing:border-box;border-radius:14px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .7s ease,box-shadow .7s ease;transform:{{ c.tf }};z-index:{{ c.z }};opacity:{{ c.op }};background:{{ c.bg }};color:{{ c.fg }};box-shadow:{{ c.sh }}">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;opacity:.65">{{ c.num }}</div>
+            <h3 style="margin:18px 0 0;font-size:32px;line-height:1;font-weight:800;letter-spacing:-.035em">{{ c.title }}</h3>
+            <p style="margin:16px 0 0;font-size:14.5px;line-height:1.55">{{ c.desc }}</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <sc-for list="{{ c.tags }}" as="t" hint-placeholder-count="2">
+              <span style="padding:6px 12px;border-radius:999px;border:1px solid {{ c.line }};font-size:11.5px;font-weight:500">{{ t }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:22px;max-width:720px;margin:0 auto;padding:16px 22px;border-radius:999px;background:#FFFDF8;border:1px solid rgba(16,16,16,.14);box-shadow:0 14px 34px rgba(16,16,16,.08)">
+      <div style="display:flex;align-items:center;gap:10px">
+        <button onClick="{{ svcPrev }}" aria-label="Anterior" style="width:38px;height:38px;border:0;border-radius:50%;background:transparent;cursor:pointer;display:grid;place-items:center" style-hover="background:rgba(16,16,16,.07)">
+          <svg width="17" height="13" viewBox="0 0 17 13" fill="none" aria-hidden="true"><path d="M8 1.5L2 6.5l6 5V1.5zM15 1.5l-6 5 6 5v-10z" fill="#101010"></path></svg>
+        </button>
+        <button onClick="{{ svcToggle }}" aria-label="Reproducir" style="width:52px;height:52px;border:0;border-radius:50%;background:#101010;cursor:pointer;display:grid;place-items:center;color:#F5F3EE;font-size:15px">{{ svcIcon }}</button>
+        <button onClick="{{ svcNext }}" aria-label="Siguiente" style="width:38px;height:38px;border:0;border-radius:50%;background:transparent;cursor:pointer;display:grid;place-items:center" style-hover="background:rgba(16,16,16,.07)">
+          <svg width="17" height="13" viewBox="0 0 17 13" fill="none" aria-hidden="true"><path d="M9 1.5l6 5-6 5v-10zM2 1.5l6 5-6 5v-10z" fill="#101010"></path></svg>
+        </button>
+      </div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px">
+          <div style="font-size:14.5px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ svcNow }}</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#4A4A45;flex:none">{{ svcCount }}</div>
+        </div>
+        <div style="margin-top:9px;height:4px;border-radius:999px;background:rgba(16,16,16,.12);overflow:hidden">
+          <div style="height:100%;border-radius:999px;background:#F9CE0B;width:{{ svcProgress }};transition:width .3s linear"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="web" style="padding:96px 40px 40px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;border-bottom:1px solid rgba(16,16,16,.14);padding-bottom:22px">
+      <h2 style="margin:0;font-size:clamp(38px,5vw,80px);line-height:.9;font-weight:800;letter-spacing:-.04em">Web &amp; UX/UI</h2>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45">03 / PROYECTOS</div>
+    </div>
+
+    <div style="background:#101010;color:#F5F3EE;padding:56px 40px 64px;margin:56px -40px 0">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:rgba(245,243,238,.6)">PROYECTO DESTACADO</div>
+        <h3 style="margin:14px 0 0;font-size:clamp(30px,3.4vw,52px);line-height:.94;font-weight:800;letter-spacing:-.035em">Vive — app de finanzas</h3>
+        <a href="https://vivetudinero.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:11px 20px;border-radius:999px;border:1px solid rgba(245,243,238,.35);color:#F5F3EE;font-size:13.5px;font-weight:600" style-hover="background:#00C566;border-color:#00C566;color:#101010">vivetudinero.com ↗</a>
+      </div>
+      <p style="margin:0;max-width:46ch;font-size:15px;line-height:1.6;color:rgba(245,243,238,.75);text-wrap:pretty">Landing y aplicación móvil para una plataforma de finanzas personales. El diseño busca quitarle peso al dinero: fondo claro, cifras grandes y legibles, y un solo color de acento que guía cada acción.</p>
+    </div>
+
+    <div style="margin-top:34px">
+      <div>
+        <div id="vive-lap" style="width:100%;overflow:hidden;height:723px">
+        <div id="vive-lap-stage" style="position:relative;width:1000px;height:723px;transform-origin:top left">
+          <div style="position:absolute;left:116.6px;top:38.3px;width:760.9px;height:474.1px;overflow:hidden;background:#F1F1EF">
+            <img src="assets/vive-landing.jpg" alt="Landing Vive" style="width:760.9px;display:block;animation:scrollpage 20s ease-in-out infinite">
+          </div>
+          <div style="position:absolute;left:814px;top:337.1px;width:174.8px;height:376.9px;overflow:hidden;border-radius:18px;background:#0E1B2E">
+            <div style="position:absolute;top:0;left:0;width:390px;height:844px;transform:scale(.4465);transform-origin:top left">
+              <dc-import name="Vive Screen" screen="1c" hint-size="390px,844px"></dc-import>
+            </div>
+          </div>
+          <img src="assets/lap-phone.png" alt="Laptop y celular" style="position:absolute;top:0;left:0;width:1000px;height:723px;display:block;pointer-events:none">
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">
+          <span style="padding:8px 14px;border-radius:999px;border:1px solid rgba(245,243,238,.28);font-size:12px;font-weight:500">Web Design</span>
+          <span style="padding:8px 14px;border-radius:999px;border:1px solid rgba(245,243,238,.28);font-size:12px;font-weight:500">UX/UI</span>
+          <span style="padding:8px 14px;border-radius:999px;border:1px solid rgba(245,243,238,.28);font-size:12px;font-weight:500">App móvil</span>
+          <span style="padding:8px 14px;border-radius:999px;border:1px solid rgba(245,243,238,.28);font-size:12px;font-weight:500">Fintech</span>
+        </div>
+      </div>
+      <div style="position:relative;margin-top:48px">
+        <div style="position:absolute;inset:0;z-index:0;pointer-events:none">
+          <div style="position:absolute;left:2%;top:4%;width:52px;height:52px;opacity:.42"><svg width="100%" height="100%" viewBox="0 0 62 62" fill="none" aria-hidden="true"><circle cx="31" cy="31" r="20" stroke="#00C566" stroke-width="1.6"></circle><path d="M31 20v22M25.5 25h8a4.5 4.5 0 010 9h-5a4.5 4.5 0 000 9h8" stroke="#00C566" stroke-width="1.6" stroke-linecap="round"></path></svg></div>
+          <div style="position:absolute;left:6%;bottom:16%;width:40px;height:40px;opacity:.42"><svg width="100%" height="100%" viewBox="0 0 66 66" fill="none" aria-hidden="true"><path d="M10 46l13-14 10 8 12-17 11 9" stroke="#00C566" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="23" cy="32" r="2.6" fill="#00C566"></circle><circle cx="45" cy="23" r="2.6" fill="#00C566"></circle></svg></div>
+          <div style="position:absolute;left:24%;top:-2%;width:34px;height:34px;opacity:.42"><svg width="100%" height="100%" viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M28 6l3.4 9.6L41 19l-9.6 3.4L28 32l-3.4-9.6L15 19l9.6-3.4L28 6z" stroke="#00C566" stroke-width="1.6" stroke-linejoin="round"></path><path d="M43 36l1.7 4.8L49.5 43l-4.8 1.7L43 49.5l-1.7-4.8L36.5 43l4.8-1.7L43 36z" stroke="#00C566" stroke-width="1.4" stroke-linejoin="round"></path></svg></div>
+          <div style="position:absolute;right:2%;top:22%;width:50px;height:50px;opacity:.42"><svg width="100%" height="100%" viewBox="0 0 60 60" fill="none" aria-hidden="true"><circle cx="30" cy="30" r="19" stroke="#00C566" stroke-width="1.6"></circle><path d="M30 30V13a17 17 0 0116.4 12.4L30 30z" stroke="#00C566" stroke-width="1.6" stroke-linejoin="round"></path></svg></div>
+          <div style="position:absolute;right:8%;bottom:8%;width:38px;height:38px;opacity:.42"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect x="9" y="18" width="46" height="30" rx="7" stroke="#00C566" stroke-width="1.6"></rect><path d="M9 28h46" stroke="#00C566" stroke-width="1.6"></path><circle cx="45" cy="38" r="3" fill="#00C566"></circle></svg></div>
+          <div style="position:absolute;right:26%;top:-3%;width:34px;height:34px;opacity:.42"><svg width="100%" height="100%" viewBox="0 0 60 60" fill="none" aria-hidden="true"><rect x="26" y="8" width="8" height="18" rx="4" stroke="#00C566" stroke-width="1.6"></rect><path d="M18 24a12 12 0 0024 0M30 38v8M23 50h14" stroke="#00C566" stroke-width="1.6" stroke-linecap="round"></path></svg></div>
+        </div>
+        <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:26px">
+        <div style="position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:22px;align-items:flex-start">
+        <div style="">
+          <div style="position:relative;box-sizing:border-box;width:214px;height:447px;border-radius:30px;border:7px solid #26251F;background:#26251F;overflow:hidden;box-shadow:0 18px 34px rgba(0,0,0,.4)">
+            <div style="position:absolute;top:9px;left:50%;transform:translateX(-50%);width:56px;height:14px;border-radius:999px;background:#0b0b0b;z-index:2"></div>
+            <div style="position:absolute;top:0;left:0;width:390px;height:844px;transform:scale(.5128);transform-origin:top left">
+              <dc-import name="Vive Screen" screen="1a" hint-size="390px,844px"></dc-import>
+            </div>
+          </div>
+          <div style="margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:rgba(245,243,238,.6)">1A / ONBOARDING</div>
+        </div>
+        <div style="padding-top:26px">
+          <div style="position:relative;box-sizing:border-box;width:214px;height:447px;border-radius:30px;border:7px solid #26251F;background:#26251F;overflow:hidden;box-shadow:0 18px 34px rgba(0,0,0,.4)">
+            <div style="position:absolute;top:9px;left:50%;transform:translateX(-50%);width:56px;height:14px;border-radius:999px;background:#0b0b0b;z-index:2"></div>
+            <div style="position:absolute;top:0;left:0;width:390px;height:844px;transform:scale(.5128);transform-origin:top left">
+              <dc-import name="Vive Screen" screen="1b" hint-size="390px,844px"></dc-import>
+            </div>
+          </div>
+          <div style="margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:rgba(245,243,238,.6)">1B / HOME</div>
+        </div>
+        <div style="padding-top:52px">
+          <div style="position:relative;box-sizing:border-box;width:214px;height:447px;border-radius:30px;border:7px solid #26251F;background:#26251F;overflow:hidden;box-shadow:0 18px 34px rgba(0,0,0,.4)">
+            <div style="position:absolute;top:9px;left:50%;transform:translateX(-50%);width:56px;height:14px;border-radius:999px;background:#0b0b0b;z-index:2"></div>
+            <div style="position:absolute;top:0;left:0;width:390px;height:844px;transform:scale(.5128);transform-origin:top left">
+              <dc-import name="Vive Screen" screen="1c" hint-size="390px,844px"></dc-import>
+            </div>
+          </div>
+          <div style="margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:rgba(245,243,238,.6)">1C / ASISTENTE</div>
+        </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;color:#00C566">
+          <svg width="26" height="42" viewBox="0 0 26 42" fill="none" aria-hidden="true"><path d="M13 40V6" stroke="#00C566" stroke-width="2.4" stroke-linecap="round"></path><path d="M3.5 15.5L13 5l9.5 10.5" stroke="#00C566" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <div style="font-family:Satoshi,Archivo,sans-serif;font-size:26px;font-weight:900;letter-spacing:.02em;text-transform:uppercase">App móvil</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div style="position:relative;overflow:hidden;background:#101010;color:#F5F3EE;margin:0 -40px;padding:8px 40px 72px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;font-family:'Satoshi',Archivo,sans-serif">
+      <div style="position:relative;display:grid;place-items:center;min-height:460px">
+        <div style="position:absolute;width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(0,197,102,.55),rgba(0,197,102,0) 68%);animation:vglow 7s ease-in-out infinite"></div>
+        <img src="uploads/sdsd.png" alt="Vive app" style="position:relative;width:82%;max-width:420px;height:auto;display:block;animation:vfloat 6.5s ease-in-out infinite;filter:drop-shadow(0 34px 50px rgba(0,0,0,.5))">
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:#00C566">
+          <span style="width:7px;height:7px;border-radius:50%;background:#00C566"></span>Proyecto de UX / UI
+        </div>
+        <h3 style="margin:20px 0 0;font-size:clamp(34px,4.2vw,62px);line-height:1.02;font-weight:900;letter-spacing:-.045em">Háblale. Ella<br>apunta <span style="background:#00C566;color:#101010;padding:0 12px;border-radius:3px">por ti</span></h3>
+        <p style="margin:26px 0 0;max-width:48ch;font-size:17px;line-height:1.55;color:rgba(245,243,238,.72);text-wrap:pretty">Inspirado en el proyecto <strong style="color:#F5F3EE;font-weight:700">Vive</strong>, una app de finanzas por voz. El reto de UX era eliminar el formulario: la persona dice el gasto en voz alta y la interfaz solo confirma. Diseñé el flujo de registro por voz, el estado de escucha y la lectura del saldo.</p>
+        <div style="display:flex;flex-direction:column;margin-top:32px">
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:16px;padding:16px 0;border-top:1px solid rgba(245,243,238,.16)">
+            <span style="font-size:12px;font-weight:700;color:#00C566">01</span>
+            <div><div style="font-size:16px;font-weight:700">Le hablas, ella apunta</div><p style="margin:6px 0 0;font-size:14px;line-height:1.5;color:rgba(245,243,238,.6)">El gasto se dice en voz alta y la app saca monto, categoría y hora.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:16px;padding:16px 0;border-top:1px solid rgba(245,243,238,.16)">
+            <span style="font-size:12px;font-weight:700;color:#00C566">02</span>
+            <div><div style="font-size:16px;font-weight:700">Una sola cifra manda</div><p style="margin:6px 0 0;font-size:14px;line-height:1.5;color:rgba(245,243,238,.6)">Jerarquía construida alrededor del saldo total, todo lo demás en segundo plano.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:34px 1fr;gap:16px;padding:16px 0;border-top:1px solid rgba(245,243,238,.16);border-bottom:1px solid rgba(245,243,238,.16)">
+            <span style="font-size:12px;font-weight:700;color:#00C566">03</span>
+            <div><div style="font-size:16px;font-weight:700">Un solo acento</div><p style="margin:6px 0 0;font-size:14px;line-height:1.5;color:rgba(245,243,238,.6)">El verde marca siempre la acción; nunca decora.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:96px;padding-bottom:22px;border-bottom:1px solid rgba(16,16,16,.14)">
+      <h3 style="margin:0;font-size:clamp(28px,3vw,44px);line-height:.94;font-weight:800;letter-spacing:-.035em">Más proyectos</h3>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45">{{ slideLabel }}</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:210px minmax(0,1fr);gap:24px;align-items:center;margin-top:44px">
+    <div style="position:relative;height:520px;overflow:hidden">
+      <div style="position:absolute;left:-880px;top:50%;width:1040px;height:1040px;margin-top:-520px;border-radius:50%;border:1px solid rgba(16,16,16,.18);pointer-events:none"></div>
+      <sc-for list="{{ arcItems }}" as="a" hint-placeholder-count="4">
+        <button onClick="{{ a.go }}" style="position:absolute;left:0;top:50%;width:210px;height:44px;margin-top:-22px;border:0;background:transparent;cursor:pointer;padding:0;text-align:left;display:flex;align-items:center;gap:14px;transition:transform .7s cubic-bezier(.22,.61,.36,1),opacity .7s ease;transform:{{ a.tf }};opacity:{{ a.op }}">
+          <span style="width:9px;height:9px;border-radius:50%;flex:none;background:{{ a.dot }}"></span>
+          <span style="font-size:{{ a.size }};font-weight:800;letter-spacing:-.04em;color:{{ a.color }};line-height:1">{{ a.num }}</span>
+          <span style="font-size:13px;font-weight:600;letter-spacing:-.01em;color:{{ a.color }};white-space:nowrap;opacity:{{ a.nameOp }}">{{ a.name }}</span>
+        </button>
+      </sc-for>
+    </div>
+    <div style="overflow:hidden">
+      <div style="display:flex;transition:transform .8s cubic-bezier(.65,.02,.2,1);transform:translateX({{ shift }})">
+        <sc-for list="{{ slides }}" as="s" hint-placeholder-count="3">
+          <div style="flex:0 0 100%;padding-right:0">
+            <div style="display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.55fr);gap:36px;align-items:stretch">
+              <div style="display:flex;flex-direction:column;justify-content:center;gap:20px;overflow:hidden">
+                <div data-stagewrap="1" style="width:100%;overflow:hidden">
+                  <div data-stage="{{ s.stage }}" style="position:relative;width:700px;height:{{ s.stageH }}px;transform-origin:top left">
+                    <div style="{{ s.screenStyle }}">
+                      <image-slot id="{{ s.slot }}" data-src="{{ s.src }}" shape="rect" fit="cover" style="--slot-frame-bg:transparent" placeholder="{{ s.ph }}"></image-slot>
+                    </div>
+                    <div role="img" aria-label="Mockup" style="position:absolute;top:0;left:0;width:700px;height:{{ s.stageH }}px;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%;background-image:{{ s.mkBg }}"></div>
+                  </div>
+                </div>
+                <sc-if value="{{ s.hasSides }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px">
+                    <sc-for list="{{ s.sides }}" as="v" hint-placeholder-count="2">
+                      <div>
+                        <div style="box-sizing:border-box;width:100%;border-radius:10px 10px 2px 2px;background:#26251F;padding:9px;box-shadow:0 14px 28px rgba(16,16,16,.14)">
+                          <div style="display:flex;align-items:center;gap:5px;padding:0 3px 8px">
+                            <span style="width:6px;height:6px;border-radius:50%;background:#4B4A42"></span>
+                            <span style="width:6px;height:6px;border-radius:50%;background:#4B4A42"></span>
+                            <span style="width:6px;height:6px;border-radius:50%;background:#4B4A42"></span>
+                            <span style="flex:1;height:12px;border-radius:999px;background:#34332C;margin-left:7px"></span>
+                          </div>
+                          <div role="img" style="width:100%;aspect-ratio:1355/511;border-radius:2px;background:#FFFFFF;background-repeat:no-repeat;background-size:100% 100%;background-position:top center;background-image:{{ v.bg }}"></div>
+                        </div>
+                        <div style="width:100%;height:8px;border-radius:0 0 7px 7px;background:#1E1D18"></div>
+                        <div style="margin-top:9px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#4A4A45">{{ v.label }}</div>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </div>
+              <div style="display:flex;flex-direction:column;justify-content:space-between;padding:6px 0">
+                <div>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45">{{ s.tag }}</div>
+                  <h3 style="margin:14px 0 0;font-size:40px;line-height:.96;font-weight:800;letter-spacing:-.035em">{{ s.title }}</h3>
+                  <sc-if value="{{ s.hasUrl }}" hint-placeholder-val="{{ true }}">
+                    <a href="{{ s.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;margin-top:14px;padding:10px 18px;border-radius:999px;border:1px solid #101010;font-size:13px;font-weight:600" style-hover="background:#F9CE0B">{{ s.urlLabel }} ↗</a>
+                  </sc-if>
+                  <p style="margin:20px 0 0;font-size:15px;line-height:1.6;color:#3B3B36;text-wrap:pretty">{{ s.brief }}</p>
+                  <div style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(16,16,16,.14)">
+                    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:#4A4A45;margin-bottom:8px">QUÉ SE QUERÍA EVOCAR</div>
+                    <p style="margin:0;font-size:15px;line-height:1.6;color:#3B3B36;text-wrap:pretty">{{ s.mood }}</p>
+                  </div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:26px">
+                  <sc-for list="{{ s.tags }}" as="t" hint-placeholder-count="3">
+                    <span style="padding:8px 14px;border-radius:999px;border:1px solid rgba(16,16,16,.2);font-size:12px;font-weight:500">{{ t }}</span>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    </div>
+    </section></div>
+  
+
+
+  <sc-if value="{{ mostrarProceso }}" hint-placeholder-val="{{ true }}">
+  <section style="padding:96px 40px 40px;font-family:Archivo,'Helvetica Neue',Helvetica,sans-serif;color:#101010">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;border-bottom:1px solid rgba(16,16,16,.14);padding-bottom:22px">
+      <h2 style="margin:0;font-size:clamp(38px,5vw,80px);line-height:.9;font-weight:800;letter-spacing:-.04em">Cómo trabajo</h2>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45">04 / PROCESO</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:44px">
+      <div style="min-width:0;border-radius:14px;padding:26px 24px 30px;background:#F9CE0B;color:#101010;display:flex;flex-direction:column;min-height:230px" style-hover="transform:translateY(-6px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em">01 /</div>
+        <div style="margin-top:auto;font-size:24px;font-weight:800;letter-spacing:-.025em">Descubrimiento</div>
+        <p style="margin:10px 0 0;font-size:14px;line-height:1.55">Entiendo el negocio, el público y lo que la marca quiere provocar.</p>
+      </div>
+      <div style="min-width:0;border-radius:14px;padding:26px 24px 30px;background:#101010;color:#F5F3EE;display:flex;flex-direction:column;min-height:230px" style-hover="transform:translateY(-6px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:rgba(245,243,238,.6)">02 /</div>
+        <div style="margin-top:auto;font-size:24px;font-weight:800;letter-spacing:-.025em">Concepto</div>
+        <p style="margin:10px 0 0;font-size:14px;line-height:1.55;color:rgba(245,243,238,.7)">Moodboard, dirección visual y las primeras rutas de diseño.</p>
+      </div>
+      <div style="min-width:0;border-radius:14px;padding:26px 24px 30px;background:#CE0E12;color:#FFF8F0;display:flex;flex-direction:column;min-height:230px" style-hover="transform:translateY(-6px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:rgba(255,248,240,.7)">03 /</div>
+        <div style="margin-top:auto;font-size:24px;font-weight:800;letter-spacing:-.025em">Diseño</div>
+        <p style="margin:10px 0 0;font-size:14px;line-height:1.55;color:rgba(255,248,240,.82)">Piezas finales, prototipos navegables y revisiones contigo.</p>
+      </div>
+      <div style="min-width:0;border-radius:14px;padding:26px 24px 30px;background:#FFFDF8;border:1px solid rgba(16,16,16,.16);color:#101010;display:flex;flex-direction:column;min-height:230px" style-hover="transform:translateY(-6px)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;color:#4A4A45">04 /</div>
+        <div style="margin-top:auto;font-size:24px;font-weight:800;letter-spacing:-.025em">Entrega</div>
+        <p style="margin:10px 0 0;font-size:14px;line-height:1.55;color:#4A4A45">Archivos organizados y acompañamiento.</p>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="position:relative;margin-top:96px;padding:0 40px;overflow:hidden;font-family:Archivo,'Helvetica Neue',Helvetica,sans-serif;background:#F5F3EE">
+    <div style="position:relative;padding:24px 0;display:flex;flex-direction:column;align-items:center;gap:8px">
+      <div style="position:absolute;left:-70px;bottom:40px;width:240px;height:240px;border-radius:50%;border:18px solid rgba(249,206,11,.35);pointer-events:none"></div>
+      <p style="position:relative;z-index:1;margin:0;max-width:22ch;text-align:center;font-size:clamp(32px,4.4vw,68px);line-height:1.02;font-weight:800;letter-spacing:-.045em;color:#101010;text-wrap:balance">Cuando lo extraordinario se vuelve ordinario, llega el <span style="color:#F9CE0B">diseño</span> a contar la historia diferente.</p>
+      <img src="assets/vive-persona.png" alt="Persona interactuando con una app" style="position:relative;z-index:1;width:100%;max-width:520px;height:auto;display:block;filter:drop-shadow(0 26px 44px rgba(16,16,16,.22))">
+    </div>
+  </section>
+
+  <footer id="contacto" style="position:relative;padding:110px 40px 44px;overflow:hidden;font-family:Archivo,'Helvetica Neue',Helvetica,sans-serif;color:#101010">
+    <div style="position:absolute;right:-70px;top:60px;width:230px;height:230px;border-radius:50%;background:#CE0E12;pointer-events:none"></div>
+    <div style="position:absolute;right:210px;top:70px;width:96px;height:96px;border-radius:50%;border:16px solid #F9CE0B;pointer-events:none"></div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:#4A4A45">05 / CONTACTO</div>
+    <h2 style="margin:20px 0 0;font-size:clamp(48px,9vw,150px);line-height:.85;font-weight:800;letter-spacing:-.05em">Hagamos algo<br>que se note.</h2>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:40px">
+      <a href="mailto:hola@valeriaperez.com" style="display:flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;background:#F9CE0B;font-size:16px;font-weight:600">Valeriaperguez@gmail.com</a>
+      <a href="https://www.instagram.com/valgeek/" target="_blank" rel="noopener" style="padding:16px 28px;border-radius:999px;border:1px solid #101010;font-size:16px;font-weight:600">Instagram</a>
+      <a href="https://www.behance.net/bleuria" target="_blank" rel="noopener" style="padding:16px 28px;border-radius:999px;border:1px solid #101010;font-size:16px;font-weight:600">Behance</a>
+      
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:24px;margin-top:80px;padding-top:22px;border-top:1px solid rgba(16,16,16,.14);font-size:13px;color:#4A4A45">
+      <span>© 2026 Valeria Pérez</span>
+      <span>Diseño gráfico y digital</span>
+    </div>
+  </footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;autoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Carrusel&quot;},&quot;segundos&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:6,&quot;min&quot;:3,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Carrusel&quot;},&quot;mostrarProceso&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;}}">
+class Component extends DCLogic {
+  state = { i: 0, svc: 0, svcPlaying: true, svcTick: 0 };
+  services = [
+    { num: '01 / SERVICIO', title: 'Web Design', desc: 'Sitios diseñados desde cero: estructura, tipografía, movimiento y una estética que hace que la marca se vea seria y viva al mismo tiempo.', tags: ['Landing', 'E-commerce', 'Portafolios'] },
+    { num: '02 / SERVICIO', title: 'UX / UI Design', desc: 'Flujos, wireframes, prototipos y sistemas de diseño que hacen la experiencia clara desde la primera pantalla.', tags: ['Wireframes', 'Prototipos', 'Design System'] },
+    { num: '03 / SERVICIO', title: 'Branding / Identidad', desc: 'Logo, paleta, tipografía, aplicaciones y manual de marca listo para usar en cualquier pieza.', tags: ['Logo', 'Paleta', 'Manual'] },
+    { num: '04 / SERVICIO', title: 'Creación de contenido de marca', desc: 'Piezas para redes, plantillas, dirección visual y calendario de publicaciones mes a mes.', tags: ['Feed', 'Plantillas', 'Calendario'] }
+  ];
+  slides = [
+    { slot: 'web-sabverse', srcId: 'sabverse', src: 'assets/sabverse-hero.jpg', ph: 'Screenshot del sitio — home completo', tag: 'PROYECTO 01 / SITIO WEB',
+      title: 'Sabverse', brief: 'Plataforma de aprendizaje activo. Landing de lanzamiento: propuesta de valor, cómo funciona, recursos y precios.',
+      mood: 'Curiosidad y movimiento. Tipografía negra de gran peso, ilustración plana y acentos naranja y azul sobre fondo crema para que el estudio se sienta ligero, no académico.',
+      tags: ['Web Design', 'UX/UI', 'E-commerce'] },
+    { slot: 'web-2', ph: 'Screenshot del sitio — home completo', tag: 'PROYECTO 02 /  WEB',
+      title: 'Bibliolabtech', brief: 'Sitio de nuestra propia empresa. Una casa digital que presenta lo que hacemos, con quién trabajamos y cómo empezar un proyecto, sin rodeos ni palabras de más.',
+      mood: 'Confianza y criterio técnico. Estructura clara, contraste alto y espacios amplios para que un cliente entienda en treinta segundos por qué quedarse.',
+      tags: ['Web Design', 'UX/UI', 'Design System'] },
+    { slot: 'web-alignwell', srcId: 'alignwell', src: 'assets/alignwell-hero.jpg', ph: 'Screenshot del sitio — home completo', tag: 'PROYECTO 03 / LANDING DE PRODUCTO',
+      title: 'AlignWell Co.', brief: 'Landing de producto para un masajeador de percusión: propuesta de valor, especificaciones, qué incluye la caja y compra directa desde la portada.',
+      mood: 'Calma y cuerpo. Verde profundo, tipografía redondeada y los accesorios flotando alrededor del titular para que el producto se sienta cuidado, casi de spa, no un aparato más.',
+      tags: ['Web Design', 'UX/UI', 'Producto'] },
+    { slot: 'web-biblioteca', srcId: 'bib-index', src: 'assets/bib-index.jpg', ph: 'Screenshot del sitio — home completo', tag: 'PROYECTO 04 / SISTEMAS CONECTADOS',
+      title: 'Sistemas de biblioteca', brief: 'Propuesta de tres sistemas para la biblioteca que se conectan entre sí: el portal, el repositorio y el catálogo. Es un proyecto que aún está en seguimiento, sin publicar el resultado final.',
+      mood: 'Continuidad. Los tres sistemas comparten retícula, tipografía y color para que se lean como una sola plataforma y no como tres páginas distintas.',
+      sides: [
+        { srcId: 'bib-repositorio', src: 'assets/bib-repositorio.jpg', label: 'Repositorio' },
+        { srcId: 'bib-catalogo', src: 'assets/bib-catalogo.jpg', label: 'Catálogo' }
+      ],
+      tags: ['Web Design', 'UX/UI', 'Sistemas conectados'] }
+  ];
+  componentDidMount() {
+    this._lastW = 0;
+    this._fitLap = () => {
+      const wrap = document.getElementById('vive-lap');
+      const stage = document.getElementById('vive-lap-stage');
+      if (!wrap || !stage) return;
+      document.querySelectorAll('[data-stage]').forEach(st => {
+        const [sw, sh] = st.getAttribute('data-stage').split(',').map(Number);
+        const par = st.parentElement;
+        if (!par || !sw) return;
+        const pw = par.clientWidth;
+        if (!pw) return;
+        const kk = Math.min(1, pw / sw);
+        st.style.transform = 'scale(' + kk + ')';
+        par.style.height = Math.round(sh * kk) + 'px';
+      });
+      const w = wrap.clientWidth;
+      if (!w || w === this._lastW) return;
+      this._lastW = w;
+      const k = Math.min(1, w / 1000);
+      stage.style.transform = 'scale(' + k + ')';
+      wrap.style.height = Math.round(723 * k) + 'px';
+      stage.style.marginLeft = Math.max(0, (w - 1000 * k) / 2) + 'px';
+    };
+    this._fillSlots = () => {
+      document.querySelectorAll('image-slot[data-src]').forEach(el => {
+        const v = el.getAttribute('data-src');
+        if (v && v.indexOf('{{') === -1 && el.getAttribute('src') !== v) el.setAttribute('src', v);
+      });
+    };
+    this._fillSlots();
+    this._slotTimer = setInterval(this._fillSlots, 500);
+    setTimeout(() => this.forceUpdate(), 60);
+    this._fitLap();
+    this._svcTimer = setInterval(() => {
+      if (!this.state.svcPlaying) return;
+      this.setState(s => {
+        const t = s.svcTick + 1;
+        return t >= 20 ? { svcTick: 0, svc: (s.svc + 1) % this.services.length } : { svcTick: t };
+      });
+    }, 250);
+    this._lapTimer = setInterval(this._fitLap, 400);
+    window.addEventListener('resize', this._fitLap);
+    if (this.props.autoplay === false) return;
+    const ms = (this.props.segundos ?? 6) * 1000;
+    this.timer = setInterval(() => this.setState(s => ({ i: (s.i + 1) % this.slides.length })), ms);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    clearInterval(this._lapTimer);
+    clearInterval(this._svcTimer);
+    clearInterval(this._slotTimer);
+    window.removeEventListener('resize', this._fitLap);
+  }
+  go(n) {
+    clearInterval(this.timer);
+    this.setState({ i: (n + this.slides.length) % this.slides.length });
+  }
+  ast(id, fallback) {
+    const el = document.getElementById('ast-' + id);
+    return el && el.src ? el.src : fallback;
+  }
+  goSvc(n) {
+    const len = this.services.length;
+    this.setState({ svc: (n + len) % len, svcTick: 0 });
+  }
+  renderVals() {
+    const i = this.state.i, n = this.slides.length;
+    const sv = this.state.svc, sn = this.services.length;
+    const svcCards = this.services.map((s, k) => {
+      let off = k - sv;
+      if (off > sn / 2) off -= sn;
+      if (off < -sn / 2) off += sn;
+      const a = Math.abs(off);
+      const active = off === 0;
+      return {
+        num: s.num, title: s.title, desc: s.desc, tags: s.tags,
+        tf: 'translateX(' + (off * 210) + 'px) scale(' + (active ? 1 : 0.86 - (a - 1) * 0.06) + ') rotateY(' + (off * -14) + 'deg)',
+        z: 10 - a,
+        op: a > 2 ? 0 : active ? 1 : 0.5,
+        bg: active ? '#F9CE0B' : '#FFFDF8',
+        fg: '#101010',
+        line: active ? 'rgba(16,16,16,.28)' : 'rgba(16,16,16,.16)',
+        sh: active ? '0 26px 50px rgba(16,16,16,.22)' : '0 12px 26px rgba(16,16,16,.1)'
+      };
+    });
+    return {
+      svcCards,
+      svcNow: this.services[sv].title,
+      svcCount: String(sv + 1).padStart(2, '0') + ' / ' + String(sn).padStart(2, '0'),
+      svcProgress: Math.round((this.state.svcTick / 20) * 100) + '%',
+      svcIcon: this.state.svcPlaying ? '❚❚' : '▶',
+      svcToggle: () => this.setState(s => ({ svcPlaying: !s.svcPlaying })),
+      svcNext: () => this.goSvc(sv + 1),
+      svcPrev: () => this.goSvc(sv - 1),
+      slides: this.slides.map((sd, k) => {
+        const mocks = [
+          { mk: this.ast('mk1', 'assets/mk1.png'), h: 413, screen: 'position:absolute;top:0;left:0;width:1000px;height:625px;overflow:hidden;background:#FFFFFF;transform-origin:0 0;transform:matrix3d(0.270103,-0.014874,0,-0.000158,-0.075184,0.365364,0,-0.000044,0,0,1,0,307.26257,34.636872,0,1)' },
+          { mk: this.ast('mk2', 'assets/mk2.png'), h: 494, screen: 'position:absolute;left:55.3px;top:21.9px;width:589.3px;height:359px;overflow:hidden;background:#FFFFFF' },
+          { mk: this.ast('mk3', 'assets/mk3.png'), h: 490, screen: 'position:absolute;left:53.6px;top:17.9px;width:592.7px;height:369.3px;overflow:hidden;background:#FFFFFF' }
+        ];
+        const m = mocks[k % mocks.length];
+        const links = { Sabverse: 'https://sabverse.com/', Bibliolabtech: 'https://bibliolabtech.com/', 'AlignWell Co.': 'https://alignwellco.com/' };
+        const url = links[sd.title];
+        return Object.assign({}, sd, { hasSides: !!sd.sides, sides: (sd.sides || []).map(v => ({ label: v.label, bg: 'url("' + this.ast(v.srcId, v.src) + '")' })), src: sd.srcId ? this.ast(sd.srcId, sd.src) : sd.src, hasUrl: !!url, url: url || '#', urlLabel: url ? url.replace(/^https?:\/\/|\/$/g, '') : '', mkBg: 'url("' + m.mk + '")', stageH: m.h, stage: '700,' + m.h, screenStyle: m.screen });
+      }),
+      arcItems: this.slides.map((sd, k) => {
+        let off = k - i;
+        if (off > n / 2) off -= n;
+        if (off < -n / 2) off += n;
+        const a = Math.abs(off);
+        const dy = off * 132;
+        const R = 520;
+        const dx = R - Math.sqrt(Math.max(0, R * R - dy * dy));
+        return {
+          num: String(k + 1).padStart(2, '0'),
+          name: off === 0 ? sd.title : '',
+          tf: 'translate(' + (26 + dx).toFixed(1) + 'px,' + dy + 'px) rotate(' + (off * 13) + 'deg)',
+          op: a > 2 ? 0 : off === 0 ? 1 : 0.32,
+          nameOp: off === 0 ? 1 : 0,
+          size: off === 0 ? '46px' : '30px',
+          color: '#101010',
+          dot: off === 0 ? '#101010' : 'rgba(16,16,16,.3)',
+          go: () => this.go(k)
+        };
+      }),
+      shift: (-i * 100) + '%',
+      slideLabel: String(i + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0'),
+      next: () => this.go(i + 1),
+      prev: () => this.go(i - 1),
+      dots: this.slides.map((s, k) => ({
+        w: k === i ? '54px' : '20px',
+        bg: k === i ? '#101010' : 'rgba(16,16,16,.22)',
+        go: () => this.go(k)
+      })),
+      mostrarProceso: this.props.mostrarProceso ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
